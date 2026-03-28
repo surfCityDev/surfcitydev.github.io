@@ -538,4 +538,5 @@ footer {
     max-height: 90vh;
     border-radius: 10px;
     box-shadow: 0 0 60px rgba(255,255,255,0.15);
+    position: relative;
 }
