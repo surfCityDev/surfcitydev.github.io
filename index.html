@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+</div>
+
 <!-- HERO SECTION -->
 <section id="hero">
     <nav>
@@ -115,10 +120,10 @@
             <div class="project-images">
                 <h4>Project Screenshots</h4>
                 <div class="image-gallery">
-                    <img src="images/ClearCare Clinic Appoinments.png" alt="ClearCare Appointments" class="project-img">
-                    <img src="images/ClearCare Clinic Mecidal Case.png" alt="ClearCare Medical Case" class="project-img">
-                    <img src="images/ClearCare Clinic Dashboard.png" alt="ClearCare Dashboard" class="project-img">
-                    <img src="images/CC Patient Assistant.png" alt="ClearCare AI Agent" class="project-img">
+                    <img src="images/ClearCare Clinic Appoinments.png" alt="ClearCare Appointments" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/ClearCare Clinic Mecidal Case.png" alt="ClearCare Medical Case" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/ClearCare Clinic Dashboard.png" alt="ClearCare Dashboard" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/CC Patient Assistant.png" alt="ClearCare AI Agent" class="project-img" onclick="openLightbox(this)">
                 </div>
             </div>
         </div>
@@ -171,10 +176,10 @@
             <div class="project-images">
                 <h4>Project Screenshots</h4>
                 <div class="image-gallery">
-                    <img src="images/PK Property Listing.png" alt="Property Listing Object" class="project-img">
-                    <img src="images/PK Property Lead.png" alt="Property Lead Object" class="project-img">
-                    <img src="images/PrimeKey Realty Dashboard.png" alt="PrimeKey Dashboard" class="project-img">
-                    <img src="images/PK Property Assistant.png" alt="PrimeKey AI Agent" class="project-img">
+                    <img src="images/PK Property Listing.png" alt="Property Listing Object" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/PK Property Lead.png" alt="Property Lead Object" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/PrimeKey Realty Dashboard.png" alt="PrimeKey Dashboard" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/PK Property Assistant.png" alt="PrimeKey AI Agent" class="project-img" onclick="openLightbox(this)">
                 </div>
             </div>
         </div>
@@ -227,12 +232,12 @@
             <div class="project-images">
                 <h4>Project Screenshots</h4>
                 <div class="image-gallery">
-                    <img src="images/Student Object .png" alt="Student Object" class="project-img">
-                    <img src="images/Mentor Object.png" alt="Mentor Object" class="project-img">
-                    <img src="images/BrightPath Auto Mentor Assignment Flow.png" alt="Flow Automation" class="project-img">
-                    <img src="images/BrightPath Student Assistant.png" alt="BrightPath AI Agent" class="project-img">
-                    <img src="images/Dashboard.png" alt="BrightPath Dashboard" class="project-img">
-                    <img src="images/Agents Conversation.png" alt="AI Agent Conversation" class="project-img">
+                    <img src="images/Student Object .png" alt="Student Object" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/Mentor Object.png" alt="Mentor Object" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/BrightPath Auto Mentor Assignment Flow.png" alt="Flow Automation" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/BrightPath Student Assistant.png" alt="BrightPath AI Agent" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/Dashboard.png" alt="BrightPath Dashboard" class="project-img" onclick="openLightbox(this)">
+                    <img src="images/Agents Conversation.png" alt="AI Agent Conversation" class="project-img" onclick="openLightbox(this)">
                 </div>
             </div>
         </div>
@@ -321,6 +326,20 @@
 <footer>
     <p>© 2026 Byron G. Rogel — Salesforce Platform App Builder & Agentforce Specialist</p>
 </footer>
+
+<!-- LIGHTBOX SCRIPT -->
+<script>
+function openLightbox(img) {
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+});
+</script>
 
 </body>
 </html>
